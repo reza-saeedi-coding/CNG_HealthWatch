@@ -4,46 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c000926-447d-4a4a-89cd-2522a88cd848" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/SAFE_IoT_Monitoring2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/analyze_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/detect_anomalies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/log_anomalies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/migrate_csv_to_sqlite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/processed_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/setup_database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/simulate_sensors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/transform_logs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dashboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/check_hour_distribution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/debug_processed_log.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/debug_summary_groups.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/manual_insert_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/preview_anomalies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/preview_processed_logs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/preview_sensor_logs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_tools/preview_tables.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/export_summary_csvs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/run_analyzer_loop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/run_export_loop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/run_export_wrapper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/run_full_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/check_processed_log_timestamps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/check_temperature_distribution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_anomaly_pipeline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_dbs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_humidity_export.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_temp_export.py" afterDir="false" />
-    </list>
+    <list default="true" id="2c000926-447d-4a4a-89cd-2522a88cd848" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,7 +159,7 @@
       <workItem from="1753068912773" duration="738000" />
       <workItem from="1753127585915" duration="6152000" />
       <workItem from="1753907438818" duration="901000" />
-      <workItem from="1753961007294" duration="299000" />
+      <workItem from="1753961007294" duration="617000" />
     </task>
     <servers />
   </component>
