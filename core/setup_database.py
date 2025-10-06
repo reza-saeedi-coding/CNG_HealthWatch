@@ -9,10 +9,9 @@ This script should be run once before launching the system.
 """
 
 import sqlite3
-from pathlib import Path
+from core.config import DB_PATH
 
-# Define the path to the database
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
+
 DB_PATH.parent.mkdir(exist_ok=True)  # Ensure the /data directory exists
 
 # Connect to the database (creates it if not found)

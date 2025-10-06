@@ -1,0 +1,10 @@
+graph TD
+  A[Sensors / EWON (planned MQTT)] -- now: simulate_sensors.py --> B[(SQLite: sensor_logs)]
+  B --> C[transform_logs.py (10s)]
+  C --> D[(SQLite: processed_logs)]
+  D --> E[detect_anomalies.py (z-score ~60s)]
+  E --> F[(SQLite: anomalies)]
+  E --> G[data/anomalies.csv]
+  D --> H[export_summary_csvs.py]
+  H --> I[[data/exports/*.csv]]
+  D --> J[dashboard.py (Streamlit)]

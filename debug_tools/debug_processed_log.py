@@ -7,11 +7,9 @@
 # ===========================================================
 
 import sqlite3
-from pathlib import Path
 import pandas as pd
+from core.config import DB_PATH
 
-# Adjusted DB path for debug_tools location
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
 
 # Load data from processed_logs table
 with sqlite3.connect(DB_PATH) as conn:

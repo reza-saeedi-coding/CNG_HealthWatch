@@ -18,11 +18,10 @@ Use Case:
 import pandas as pd
 import sqlite3
 from pathlib import Path
+from core.config import DATA_DIR, DB_PATH
 
-# Define paths for CSV file and SQLite database
-BASE_DIR = Path(__file__).resolve().parents[1]
-CSV_PATH = BASE_DIR / "data" / "sensor_log.csv"
-DB_PATH = BASE_DIR / "data" / "sensor_data.db"
+CSV_PATH = DATA_DIR / "sensor_log.csv"
+
 
 # Load the sensor data from CSV into a pandas DataFrame
 df = pd.read_csv(CSV_PATH)

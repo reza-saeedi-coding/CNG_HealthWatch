@@ -6,6 +6,7 @@
 # and is useful for keeping data analysis updated continuously.
 # ===========================================================
 
+from core.config import DB_PATH
 import subprocess
 import time
 import sys

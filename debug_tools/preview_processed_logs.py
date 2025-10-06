@@ -9,10 +9,8 @@ Useful for inspecting data after transformation and before visualization.
 
 import sqlite3
 import pandas as pd
-from pathlib import Path
+from core.config import DB_PATH
 
-# Define the path to the SQLite database
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
 
 # Connect and fetch recent processed log entries
 with sqlite3.connect(DB_PATH) as conn:

@@ -19,7 +19,7 @@ import subprocess
 import sys
 import os
 import sqlite3
-from pathlib import Path
+from core.config import DB_PATH, DATA_DIR
 
 # ----------- Starting baseline values for our simulation -----------
 pressure = 110
@@ -29,8 +29,7 @@ vibration = 5.3
 humidity = 40
 compressor_status = 1  # 1 = ON, 0 = OFF
 
-# === Define where the database is going to be ======================
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
+CSV_PATH = DATA_DIR / "sensor_log.csv"
 
 # === Create the sensor_logs table if it doesn't exist ==============
 with sqlite3.connect(DB_PATH) as _conn:
@@ -49,14 +48,16 @@ with sqlite3.connect(DB_PATH) as _conn:
     """)
     _conn.commit()
 
-# === This part is just to make sure the CSV is ready if we ever want to use it ===
-if not os.path.exists("../data/sensor_log.csv"):
-    with open("../data/sensor_log.csv", mode="w", newline="") as file:
+# Make sure the data folder exists, then ensure the CSV file exists
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+if not CSV_PATH.exists():
+    with open(CSV_PATH, mode="w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow([
             "timestamp", "pressure", "temperature", "flow_rate",
             "vibration", "humidity", "compressor_status"
         ])
+
 
 count = 0  # We'll use this to track how many records have been logged
 
@@ -128,8 +129,7 @@ while True:
         ))
         conn.commit()
 
-    # === Backup to CSV too, in case we want to use it later ===
-    with open("../data/sensor_log.csv", mode="a", newline="") as file:
+    with open(CSV_PATH, mode="a", newline="") as file:
         writer = csv.writer(file)
         writer.writerow([
             sensor_reading["timestamp"],
@@ -145,4 +145,5 @@ while True:
     count += 1
     if count % 10 == 0:
         print("Running Analysis....")
-        subprocess.run([sys.executable, "../core/analyze_data.py"])
+        subprocess.run([sys.executable, "-m", "core.analyze_data"])
+

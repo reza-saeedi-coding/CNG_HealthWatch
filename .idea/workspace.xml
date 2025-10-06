@@ -5,18 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c000926-447d-4a4a-89cd-2522a88cd848" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/cli.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/ipython.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/py.typed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/variables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/dotenv/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/licenses/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/python_dotenv-1.1.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.venv/Scripts/dotenv.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/logs/mqtt_subscriber.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/RUNBOOK.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/THESIS_LOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/THESIS_OUTLINE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/figures/system_architecture.mmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/sections/03_system_architecture.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ingest/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ingest/mqtt_subscriber.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/publish_once.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/smoke_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/dump_file_timeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/avg_flow_rate_by_hour.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/avg_flow_rate_by_hour.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/avg_humidity_by_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/avg_humidity_by_day.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/avg_pressure_by_hour.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/avg_pressure_by_hour.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/avg_pressure_by_minute.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/avg_pressure_by_minute.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/avg_vibration_by_weekday.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/avg_vibration_by_weekday.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/compressor_status_by_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/compressor_status_by_day.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts/max_temp_by_day.png" beforeDir="false" afterPath="$PROJECT_DIR$/charts/max_temp_by_day.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/analyze_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/analyze_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/detect_anomalies.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/detect_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/log_anomalies.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/log_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrate_csv_to_sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/migrate_csv_to_sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/processed_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/processed_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/setup_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/setup_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/simulate_sensors.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/simulate_sensors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/transform_logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/transform_logs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/anomalies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/anomalies.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sensor_log.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/sensor_log.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/anomalies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/anomalies.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/avg_flow_rate_by_hour.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/avg_flow_rate_by_hour.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/avg_humidity_by_day.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/avg_humidity_by_day.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/avg_pressure_by_hour.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/avg_pressure_by_hour.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/avg_pressure_by_minute.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/avg_pressure_by_minute.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/avg_temperature_by_hour.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/avg_temperature_by_hour.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/avg_vibration_by_weekday.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/avg_vibration_by_weekday.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/compressor_status_by_day.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/compressor_status_by_day.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/compressor_transitions_by_day.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/compressor_transitions_by_day.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exports/max_temperature_by_day.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exports/max_temperature_by_day.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/check_hour_distribution.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/check_hour_distribution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/debug_processed_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/debug_processed_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/debug_summary_groups.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/debug_summary_groups.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/manual_insert_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/manual_insert_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/preview_anomalies.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/preview_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/preview_processed_logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/preview_processed_logs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/preview_sensor_logs.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/preview_sensor_logs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug_tools/preview_tables.py" beforeDir="false" afterPath="$PROJECT_DIR$/debug_tools/preview_tables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/export_summary_csvs.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/export_summary_csvs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run_analyzer_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/run_analyzer_loop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run_export_loop.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/run_export_loop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/run_full_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/run_full_pipeline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +86,16 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2zEcGkrsPHFf2j5A6sFoCuJkxim" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.analyze_data.executor&quot;: &quot;Run&quot;,
     &quot;Python.backup_data.executor&quot;: &quot;Run&quot;,
     &quot;Python.check_csv_export.executor&quot;: &quot;Run&quot;,
@@ -49,19 +105,23 @@
     &quot;Python.check_temperature_distribution.executor&quot;: &quot;Run&quot;,
     &quot;Python.checking_if_anomaly_appends.executor&quot;: &quot;Run&quot;,
     &quot;Python.dashboard.executor&quot;: &quot;Run&quot;,
+    &quot;Python.db.executor&quot;: &quot;Run&quot;,
     &quot;Python.debug_db_tail.executor&quot;: &quot;Run&quot;,
     &quot;Python.debug_processed_log.executor&quot;: &quot;Run&quot;,
     &quot;Python.debug_summary_groups.executor&quot;: &quot;Run&quot;,
     &quot;Python.detect_anomalies.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dump_file_timeline.executor&quot;: &quot;Run&quot;,
     &quot;Python.export_summary_csvs.executor&quot;: &quot;Run&quot;,
     &quot;Python.log_anomalies.executor&quot;: &quot;Run&quot;,
     &quot;Python.manual_insert_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.migrate_csv_to_sqlite.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mqtt_subscriber.executor&quot;: &quot;Run&quot;,
     &quot;Python.preview_anomalies.executor&quot;: &quot;Run&quot;,
     &quot;Python.preview_processed_logs.executor&quot;: &quot;Run&quot;,
     &quot;Python.preview_sensor_logs.executor&quot;: &quot;Run&quot;,
     &quot;Python.preview_tables.executor&quot;: &quot;Run&quot;,
     &quot;Python.processed_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python.publish_once.executor&quot;: &quot;Run&quot;,
     &quot;Python.rebuild_csvs_from_raw.executor&quot;: &quot;Run&quot;,
     &quot;Python.rebuild_summaries_from_raw.executor&quot;: &quot;Run&quot;,
     &quot;Python.run_analyzer_loop.executor&quot;: &quot;Run&quot;,
@@ -70,8 +130,10 @@
     &quot;Python.run_full_pipeline.executor&quot;: &quot;Run&quot;,
     &quot;Python.setup_database.executor&quot;: &quot;Run&quot;,
     &quot;Python.simulate_sensors.executor&quot;: &quot;Run&quot;,
+    &quot;Python.smoke_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.summary_utils.executor&quot;: &quot;Run&quot;,
     &quot;Python.test2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_anomaly_pipeline.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_dbs.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_humidity_export.executor&quot;: &quot;Run&quot;,
     &quot;Python.test_temp_export.executor&quot;: &quot;Run&quot;,
@@ -79,7 +141,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/db-adapter-and-runbook&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Dell/PycharmProjects/CNG_HealthWatch&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -98,6 +161,32 @@
       <recent name="C:\Users\Dell\PycharmProjects\SAFE_IoT_Monitoring3\tests" />
       <recent name="C:\Users\Dell\PycharmProjects\SAFE_IoT_Monitoring3\scripts" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="transform_logs" type="PythonConfigurationType" factoryName="Python">
+      <module name="SAFE_IoT_Monitoring2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 virtualenv at C:\Users\Dell\PycharmProjects\CNG_HealthWatch\.venv" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Dell\PycharmProjects\CNG_HealthWatch" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="core.transform_logs" />
+      <option name="PARAMETERS" value="core.transform_logs" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -179,11 +268,34 @@
       <workItem from="1755359148306" duration="2530000" />
       <workItem from="1755760710439" duration="199000" />
       <workItem from="1755760927753" duration="1029000" />
+      <workItem from="1756559947612" duration="342000" />
+      <workItem from="1756982876539" duration="494000" />
+      <workItem from="1757071086609" duration="1296000" />
+      <workItem from="1757323275101" duration="3656000" />
+      <workItem from="1757572966259" duration="6048000" />
+      <workItem from="1757695611256" duration="5086000" />
+      <workItem from="1757781941521" duration="8384000" />
+      <workItem from="1757838058799" duration="4752000" />
+      <workItem from="1757920041731" duration="16039000" />
+      <workItem from="1758018297240" duration="1657000" />
+      <workItem from="1758796107042" duration="3660000" />
+      <workItem from="1759132102696" duration="6488000" />
+      <workItem from="1759265403271" duration="5216000" />
+      <workItem from="1759271214064" duration="1076000" />
+      <workItem from="1759304904173" duration="1360000" />
+      <workItem from="1759306914720" duration="8891000" />
+      <workItem from="1759334865990" duration="2084000" />
+      <workItem from="1759699271702" duration="3374000" />
+      <workItem from="1759733167003" duration="4624000" />
+      <workItem from="1759782694490" duration="612000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$preview_tables.coverage" NAME="preview_tables Coverage Results" MODIFIED="1752266620233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
@@ -192,17 +304,20 @@
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$detect_anomalies.coverage" NAME="detect_anomalies Coverage Results" MODIFIED="1752963388067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring2$simulate_sensors.coverage" NAME="simulate_sensors Coverage Results" MODIFIED="1751324767269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$processed_table.coverage" NAME="processed_table Coverage Results" MODIFIED="1751486049256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$preview_sensor_logs.coverage" NAME="preview_sensor_logs Coverage Results" MODIFIED="1752266617543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$run_full_pipeline.coverage" NAME="run_full_pipeline Coverage Results" MODIFIED="1759701240615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$check_hour_distribution.coverage" NAME="check_hour_distribution Coverage Results" MODIFIED="1752349469179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$check_processed_log.coverage" NAME="check_processed_log Coverage Results" MODIFIED="1752967469739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$preview_sensor_logs.coverage" NAME="preview_sensor_logs Coverage Results" MODIFIED="1752266617543" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$migrate_csv_to_sqlite.coverage" NAME="migrate_csv_to_sqlite Coverage Results" MODIFIED="1752349172856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$check_processed_log.coverage" NAME="check_processed_log Coverage Results" MODIFIED="1752967469739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$preview_sensor_logs.coverage" NAME="preview_sensor_logs Coverage Results" MODIFIED="1751469063644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$dashboard.coverage" NAME="dashboard Coverage Results" MODIFIED="1751563883277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$run_export_wrapper.coverage" NAME="run_export_wrapper Coverage Results" MODIFIED="1753064571085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$run_export_loop.coverage" NAME="run_export_loop Coverage Results" MODIFIED="1751650886722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$transform_logs.coverage" NAME="transform_logs Coverage Results" MODIFIED="1752588325219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$publish_once.coverage" NAME="publish_once Coverage Results" MODIFIED="1759314129458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$check_processed_log_timestamps.coverage" NAME="check_processed_log_timestamps Coverage Results" MODIFIED="1751756541948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$debug_summary_groups.coverage" NAME="debug_summary_groups Coverage Results" MODIFIED="1752266655075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$preview_anomalies.coverage" NAME="preview_anomalies Coverage Results" MODIFIED="1757574558740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug_tools" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$manual_insert_test.coverage" NAME="manual_insert_test Coverage Results" MODIFIED="1751496691448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$run_full_pipeline.coverage" NAME="run_full_pipeline Coverage Results" MODIFIED="1752409129559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$setup_database.coverage" NAME="setup_database Coverage Results" MODIFIED="1752266627484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
@@ -211,10 +326,14 @@
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$preview_processed_logs.coverage" NAME="preview_processed_logs Coverage Results" MODIFIED="1751495518756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/CNG_HealthWatch$test_dbs.coverage" NAME="test_dbs Coverage Results" MODIFIED="1753127652462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/CNG_HealthWatch$check_hour_distribution.coverage" NAME="check_hour_distribution Coverage Results" MODIFIED="1753129658144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/debug_tools" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$run_export_loop.coverage" NAME="run_export_loop Coverage Results" MODIFIED="1757700211306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$transform_logs.coverage" NAME="transform_logs Coverage Results" MODIFIED="1751750995455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$dashboard.coverage" NAME="dashboard Coverage Results" MODIFIED="1757573355329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$analyze_data.coverage" NAME="analyze_data Coverage Results" MODIFIED="1752599245879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$run_full_pipeline.coverage" NAME="run_full_pipeline Coverage Results" MODIFIED="1751760138560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$test_humidity_export.coverage" NAME="test_humidity_export Coverage Results" MODIFIED="1751667679064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$db.coverage" NAME="db Coverage Results" MODIFIED="1759326970379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$transform_logs.coverage" NAME="transform_logs Coverage Results" MODIFIED="1759736968530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\Dell\PycharmProjects\CNG_HealthWatch" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$checking_if_anomaly_appends.coverage" NAME="checking_if_anomaly_appends Coverage Results" MODIFIED="1751755387665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$debug_db_tail.coverage" NAME="debug_db_tail Coverage Results" MODIFIED="1752259719628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$export_summary_csvs.coverage" NAME="export_summary_csvs Coverage Results" MODIFIED="1751762622764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
@@ -227,22 +346,28 @@
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$export_summary_csvs.coverage" NAME="export_summary_csvs Coverage Results" MODIFIED="1752365190204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$run_analyzer_loop.coverage" NAME="run_analyzer_loop Coverage Results" MODIFIED="1751649737911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$test_humidity_export.coverage" NAME="test_humidity_export Coverage Results" MODIFIED="1752178484829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$dump_file_timeline.coverage" NAME="dump_file_timeline Coverage Results" MODIFIED="1757696956246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$debug_processed_log.coverage" NAME="debug_processed_log Coverage Results" MODIFIED="1751651580253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$processed_table.coverage" NAME="processed_table Coverage Results" MODIFIED="1752349140165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$smoke_test.coverage" NAME="smoke_test Coverage Results" MODIFIED="1759736973954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$check_csv_export.coverage" NAME="check_csv_export Coverage Results" MODIFIED="1752967387283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$summary_utils.coverage" NAME="summary_utils Coverage Results" MODIFIED="1752259745068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
-    <SUITE FILE_PATH="coverage/CNG_HealthWatch$run_export_wrapper.coverage" NAME="run_export_wrapper Coverage Results" MODIFIED="1755761186276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$run_export_wrapper.coverage" NAME="run_export_wrapper Coverage Results" MODIFIED="1757701042992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$preview_anomalies.coverage" NAME="preview_anomalies Coverage Results" MODIFIED="1752266609277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$migrate_csv_to_sqlite.coverage" NAME="migrate_csv_to_sqlite Coverage Results" MODIFIED="1751389322031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$export_summary_csvs.coverage" NAME="export_summary_csvs Coverage Results" MODIFIED="1759701080118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$test_temp_export.coverage" NAME="test_temp_export Coverage Results" MODIFIED="1751667014059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CNG_HealthWatch$simulate_sensors.coverage" NAME="simulate_sensors Coverage Results" MODIFIED="1755761172430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$simulate_sensors.coverage" NAME="simulate_sensors Coverage Results" MODIFIED="1759700584201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$check_temperature_distribution.coverage" NAME="check_temperature_distribution Coverage Results" MODIFIED="1751666789202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$analyze_data.coverage" NAME="analyze_data Coverage Results" MODIFIED="1751651351204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$log_anomalies.coverage" NAME="log_anomalies Coverage Results" MODIFIED="1757574419198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$test_anomaly_pipeline.coverage" NAME="test_anomaly_pipeline Coverage Results" MODIFIED="1757574536781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$run_export_loop.coverage" NAME="run_export_loop Coverage Results" MODIFIED="1752263827645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$preview_processed_logs.coverage" NAME="preview_processed_logs Coverage Results" MODIFIED="1752266613204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$run_analyzer_loop.coverage" NAME="run_analyzer_loop Coverage Results" MODIFIED="1752350372315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$simulate_sensors.coverage" NAME="simulate_sensors Coverage Results" MODIFIED="1753058953236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3failed$rebuild_summaries_from_raw.coverage" NAME="rebuild_summaries_from_raw Coverage Results" MODIFIED="1752163100997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/CNG_HealthWatch$mqtt_subscriber.coverage" NAME="mqtt_subscriber Coverage Results" MODIFIED="1758796688332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ingest" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$simulate_sensors.coverage" NAME="simulate_sensors Coverage Results" MODIFIED="1753064550665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SAFE_IoT_Monitoring3$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1751664557283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

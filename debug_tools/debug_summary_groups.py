@@ -8,10 +8,8 @@
 
 import sqlite3
 import pandas as pd
-from pathlib import Path
+from core.config import DB_PATH
 
-# Adjust path relative to debug_tools directory
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
 
 # Load timestamps from processed logs table
 with sqlite3.connect(DB_PATH) as conn:

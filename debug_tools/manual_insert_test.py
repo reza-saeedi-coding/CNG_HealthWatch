@@ -12,11 +12,8 @@ Note:
 
 import sqlite3
 import random
-from datetime import datetime, timedelta
-from pathlib import Path
-
-# Path to the SQLite database
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
+from datetime import datetime, timedelta, timezone
+from core.config import DB_PATH
 
 
 def generate_random_log(fake_time):
@@ -32,7 +29,8 @@ def generate_random_log(fake_time):
     base_pressure = 120 if 9 <= hour <= 17 else 90
 
     return {
-        "timestamp": fake_time.isoformat(),
+        # Ensure UTC ISO-8601 with timezone, e.g. 2025-09-13T12:00:00+00:00
+        "timestamp": fake_time.replace(tzinfo=timezone.utc).isoformat(),
         "pressure": round(random.uniform(base_pressure, base_pressure + 50), 1),
         "temperature": round(random.uniform(base_temp, base_temp + 15), 1),
         "flow_rate": round(random.uniform(40, 140), 1),
@@ -45,16 +43,16 @@ def generate_random_log(fake_time):
 # Store all generated logs in a list
 logs_to_insert = []
 
-# Start 7 days ago from now (UTC)
-start_time = datetime.utcnow() - timedelta(days=7)
+# Start 7 days ago from now (UTC, naive -> we attach UTC tzinfo in generate_random_log)
+start_time = datetime.now(timezone.utc) - timedelta(days=7)
 
-# Generate a reading every 15 minutes for 7 days = 2688 logs
+# Generate a reading every 15 minutes for 7 days = 672 logs
 for i in range(7 * 24 * 4):
     log_time = start_time + timedelta(minutes=i * 15)
     logs_to_insert.append(generate_random_log(log_time))
 
 # Insert logs into the database after clearing previous ones
-with sqlite3.connect(DB_PATH) as conn:
+with sqlite3.connect(str(DB_PATH)) as conn:
     cur = conn.cursor()
 
     # Clear previous records from sensor_logs
@@ -66,7 +64,15 @@ with sqlite3.connect(DB_PATH) as conn:
             INSERT INTO sensor_logs 
             (timestamp, pressure, temperature, flow_rate, vibration, humidity, compressor_status)
             VALUES (?, ?, ?, ?, ?, ?, ?)
-        """, tuple(log.values()))
+        """, (
+            log["timestamp"],
+            log["pressure"],
+            log["temperature"],
+            log["flow_rate"],
+            log["vibration"],
+            log["humidity"],
+            log["compressor_status"],
+        ))
 
     conn.commit()
 

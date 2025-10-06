@@ -8,10 +8,9 @@ This is useful during debugging or the initial setup of the database.
 """
 
 import sqlite3
-from pathlib import Path
+from core.config import DB_PATH
 
-# Define the database path
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
+
 
 # Connect to the database
 conn = sqlite3.connect(DB_PATH)

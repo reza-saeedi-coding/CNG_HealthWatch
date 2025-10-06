@@ -9,10 +9,8 @@
 
 import sqlite3
 import pandas as pd
-from pathlib import Path
+from core.config import DB_PATH
 
-# Define path to the SQLite database
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
 
 # Connect to the database and load timestamp + flow_rate
 with sqlite3.connect(DB_PATH) as conn:

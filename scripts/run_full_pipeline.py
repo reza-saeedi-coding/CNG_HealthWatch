@@ -1,40 +1,72 @@
-# run_full_pipeline.py
+# ===========================================================
+# RUN FULL PIPELINE (OS-portable)
 #
-# Description:
-# This script runs the full data pipeline in a loop every 1 minute.
-# It executes:
-#   1. transform_logs.py - transforms raw logs into processed format
-#   2. analyze_data.py - detects anomalies in the processed data
-#   3. run_export_wrapper.py - exports summary statistics to CSV
-# Useful for automating all stages of the data flow during development or testing.
+# Starts the end-to-end stack as separate processes:
+# - core.simulate_sensors         (ingest)
+# - core.transform_logs           (transform)
+# - scripts.run_analyzer_loop     (anomaly detection loop)
+# - scripts.run_export_loop       (exports every 5 minutes)
+#
+# How to run (from project root):
+#   python -m scripts.run_full_pipeline
+#
+# Stop with Ctrl+C; this script will terminate child processes.
+# ===========================================================
 
 import subprocess
-import time
 import sys
-from pathlib import Path
+import time
+import os
 
-# Define base paths
-BASE = Path(__file__).resolve().parent
-core_dir = BASE / "../core"
-scripts_dir = BASE
+PROCS = []
 
-# Use current Python interpreter
-PYTHON_EXEC = sys.executable
+def spawn(module: str):
+    """Start a module as a child process with the current interpreter."""
+    p = subprocess.Popen([sys.executable, "-m", module])
+    PROCS.append((module, p))
+    print(f"▶ Started {module} (pid={p.pid})")
 
-def run_script(label, path):
-    """Run a script and report the result."""
-    print(f"Running {label}...")
+def main():
     try:
-        subprocess.run([PYTHON_EXEC, str(path)], check=True)
-        print(f"{label} completed.\n")
-    except subprocess.CalledProcessError as e:
-        print(f"{label} failed: {e}\n")
+        ingest_mode = os.getenv("INGEST_MODE", "sim").lower()  # "sim" or "mqtt"
+        ingest_module = "core.simulate_sensors" if ingest_mode == "sim" else "ingest.mqtt_subscriber"
+
+        # Ingest + pipelines
+        spawn(ingest_module)
+        time.sleep(1)  # small stagger helps with logs
+        spawn("core.transform_logs")
+        time.sleep(1)
+        spawn("scripts.run_analyzer_loop")
+        time.sleep(1)
+        spawn("scripts.run_export_loop")
+
+        print("\n Full pipeline running. Press Ctrl+C to stop.\n")
+        # Keep the supervisor alive while children run
+        while True:
+            # Optionally, check if any child died and print status
+            still_running = []
+            for mod, p in PROCS:
+                ret = p.poll()
+                if ret is None:
+                    still_running.append((mod, p))
+                else:
+                    print(f" {mod} exited with code {ret}")
+            PROCS[:] = still_running
+            if not PROCS:
+                print("All child processes exited.")
+                break
+            time.sleep(5)
+
+    except KeyboardInterrupt:
+        print("\n Stopping… (Ctrl+C)")
+    finally:
+        # Terminate children
+        for mod, p in PROCS:
+            try:
+                p.terminate()
+                print(f"Terminated {mod} (pid={p.pid})")
+            except Exception:
+                pass
 
 if __name__ == "__main__":
-    print("Full Pipeline started. Will run every 1 minute.\n")
-    while True:
-        run_script("Transform Logs", core_dir / "transform_logs.py")
-        run_script("Analyze Data", core_dir / "analyze_data.py")
-        run_script("Export Summary Wrapper", scripts_dir / "run_export_wrapper.py")
-        print("Waiting 1 minute...\n")
-        time.sleep(60)
+    main()
