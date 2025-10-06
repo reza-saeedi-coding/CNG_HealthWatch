@@ -1,0 +1,46 @@
+2025-09-30 23:56:08,291 INFO [mqtt] sensor_logs table ready at: C:\Users\Dell\PycharmProjects\CNG_HealthWatch\data\sensor_data.db
+2025-09-30 23:56:08,292 INFO [mqtt] connecting to test.mosquitto.org:1883 ...
+2025-09-30 23:56:08,351 INFO [mqtt] subscriber running… Ctrl+C to stop.
+2025-09-30 23:56:08,381 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-09-30 23:57:07,194 INFO [mqtt] row inserted
+2025-09-30 23:59:26,383 INFO [mqtt] stopping…
+2025-09-30 23:59:26,383 WARNING [mqtt] disconnected (rc=0) will auto re-try
+2025-09-30 23:59:29,659 INFO [mqtt] sensor_logs table ready at: C:\Users\Dell\PycharmProjects\CNG_HealthWatch\data\sensor_data.db
+2025-09-30 23:59:29,660 INFO [mqtt] connecting to test.mosquitto.org:1883 ...
+2025-09-30 23:59:29,716 INFO [mqtt] subscriber running… Ctrl+C to stop.
+2025-09-30 23:59:29,762 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-10-01 00:00:31,925 INFO [mqtt] row inserted
+2025-10-01 00:05:44,304 INFO [mqtt] row inserted
+2025-10-01 00:08:58,491 INFO [mqtt] sensor_logs table ready at: C:\Users\Dell\PycharmProjects\CNG_HealthWatch\data\sensor_data.db
+2025-10-01 00:08:58,492 INFO [mqtt] connecting to test.mosquitto.org:1883 ...
+2025-10-01 00:08:58,553 INFO [mqtt] subscriber running… Ctrl+C to stop.
+2025-10-01 00:08:58,580 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-10-01 00:09:09,210 INFO [mqtt] row inserted
+2025-10-01 00:14:51,233 INFO [mqtt] row inserted
+2025-10-01 00:26:10,940 INFO [mqtt] row inserted
+2025-10-01 10:09:30,869 INFO [mqtt] sensor_logs table ready at: C:\Users\Dell\PycharmProjects\CNG_HealthWatch\data\sensor_data.db
+2025-10-01 10:09:30,870 INFO [mqtt] connecting to test.mosquitto.org:1883 ...
+2025-10-01 10:09:30,930 INFO [mqtt] subscriber running… Ctrl+C to stop.
+2025-10-01 10:09:30,970 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-10-01 10:22:14,483 INFO [mqtt] sensor_logs table ready at: C:\Users\Dell\PycharmProjects\CNG_HealthWatch\data\sensor_data.db
+2025-10-01 10:22:14,484 INFO [mqtt] connecting to test.mosquitto.org:1883 ...
+2025-10-01 10:22:14,547 INFO [mqtt] subscriber running… Ctrl+C to stop.
+2025-10-01 10:22:14,605 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-10-01 10:22:39,270 INFO [mqtt] row inserted
+2025-10-01 12:20:44,325 INFO [mqtt] row inserted
+2025-10-01 12:22:10,102 INFO [mqtt] row inserted
+2025-10-01 12:22:30,631 INFO [mqtt] row inserted
+2025-10-01 12:27:49,704 INFO [mqtt] sensor_logs table ready at: C:\Users\Dell\PycharmProjects\CNG_HealthWatch\data\sensor_data.db
+2025-10-01 12:27:49,704 INFO [mqtt] connecting to test.mosquitto.org:1883 ...
+2025-10-01 12:27:49,772 INFO [mqtt] subscriber running… Ctrl+C to stop.
+2025-10-01 12:27:49,800 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-10-01 12:27:57,806 INFO [mqtt] row inserted
+2025-10-01 15:50:37,321 WARNING [mqtt] disconnected (rc=16) will auto re-try
+2025-10-01 15:50:37,324 WARNING [mqtt] disconnected (rc=16) will auto re-try
+2025-10-01 15:53:13,490 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-10-01 16:02:57,906 INFO [mqtt] sensor_logs table ready at: C:\Users\Dell\PycharmProjects\CNG_HealthWatch\data\sensor_data.db
+2025-10-01 16:02:57,906 INFO [mqtt] connecting to test.mosquitto.org:1883 ...
+2025-10-01 16:02:57,961 INFO [mqtt] subscriber running… Ctrl+C to stop.
+2025-10-01 16:02:57,993 INFO [mqtt] connected rc=0 -> subscribe cng/dell-demo/telemetry
+2025-10-01 16:03:06,694 INFO [mqtt] row inserted
+2025-10-01 16:03:06,714 INFO [mqtt] row inserted

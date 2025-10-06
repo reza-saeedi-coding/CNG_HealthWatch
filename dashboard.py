@@ -17,12 +17,11 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
-from pathlib import Path
 from streamlit_autorefresh import st_autorefresh
 import matplotlib.pyplot as plt
+from core.config import DB_PATH, LOCAL_TZ
 
-# === Define database path ===
-DB_PATH = Path(__file__).resolve().parent / "data" / "sensor_data.db"
+
 
 # === Load anomalies once per run ===
 try:
@@ -49,7 +48,7 @@ if selected_tab == "Live Metrics":
 
     st.title("SAFE SENSOR DASHBOARD")
     df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
-    df["timestamp"] = df["timestamp"].dt.tz_convert("Europe/Rome")
+    df["timestamp"] = df["timestamp"].dt.tz_convert(LOCAL_TZ)
     local_time = df["timestamp"].iloc[0]
     st.write("Last Update (Local):", local_time.strftime("%Y-%m-%d %H:%M:%S"))
 
@@ -140,13 +139,13 @@ elif selected_tab == "Summary Charts":
         query = """
         SELECT *
         FROM processed_logs
-        WHERE timestamp >= datetime('now', '-14 days')
+        WHERE timestamp >= datetime('now', '-7 days')
         ORDER BY timestamp ASC
         """
         df = pd.read_sql_query(query, conn)
 
     df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
-    df["timestamp"] = df["timestamp"].dt.tz_convert("Europe/Rome")
+    df["timestamp"] = df["timestamp"].dt.tz_convert(LOCAL_TZ)
     df["time_label"] = df["timestamp"].dt.strftime("%Y-%m-%d %H:%M")
     df["hour"] = df["timestamp"].dt.hour
     df["minute"] = df["timestamp"].dt.floor("min")
@@ -228,7 +227,7 @@ elif selected_tab == "Anomalies":
 
     if not anomalies_df.empty:
         anomalies_df["timestamp"] = pd.to_datetime(anomalies_df["timestamp"], utc=True)
-        anomalies_df["timestamp"] = anomalies_df["timestamp"].dt.tz_convert("Europe/Rome")
+        anomalies_df["timestamp"] = anomalies_df["timestamp"].dt.tz_convert(LOCAL_TZ)
 
     st.subheader("Recent Anomalies")
     st.dataframe(anomalies_df.sort_values("timestamp", ascending=False).head(300))

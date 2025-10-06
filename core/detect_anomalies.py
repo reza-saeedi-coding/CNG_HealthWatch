@@ -11,12 +11,11 @@
 
 import pandas as pd
 import sqlite3
-from pathlib import Path
+from core.config import DB_PATH
 
 
 def detect_anomalies():
-    # === Setup database path ===
-    DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
+
 
     # === Load the latest 10,000 processed rows from the database ===
     with sqlite3.connect(DB_PATH) as conn:

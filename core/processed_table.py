@@ -9,10 +9,8 @@ Run this script once during initial setup or reset of the database.
 """
 
 import sqlite3
-from pathlib import Path
+from core.config import DB_PATH
 
-# Define the database path (adjust if structure changes)
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
 
 # --- Create processed_logs table ---
 with sqlite3.connect(DB_PATH) as conn:

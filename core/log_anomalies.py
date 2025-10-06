@@ -12,6 +12,11 @@
 import csv
 import datetime
 import sqlite3
+from core.config import DATA_DIR, DB_PATH
+from core.db import get_connection
+import logging
+import sys
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 
@@ -20,8 +25,12 @@ def log_anomalies_to_csv(anomalies_dict):
     if not anomalies_dict:
         return
 
+    # Write to a project-rooted path, so it works from any CWD
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    csv_path = DATA_DIR / "anomalies.csv"
+
     # Open (or create) the anomalies.csv file in append mode
-    with open("data/anomalies.csv", mode="a", newline="") as file:
+    with open(csv_path, mode="a", newline="") as file:
         writer = csv.writer(file)
         for sensor, info in anomalies_dict.items():
             # Timestamp when the anomaly was logged
@@ -36,10 +45,7 @@ def log_anomalies_to_db(anomalies_dict):
     if not anomalies_dict:
         return
 
-    # Define the path to the SQLite database
-    DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
-
-    # Connect and insert anomaly data
+    # Connect and insert anomaly data (DB_PATH from core.config)
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
         for sensor, info in anomalies_dict.items():

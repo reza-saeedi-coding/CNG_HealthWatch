@@ -15,10 +15,12 @@ from pathlib import Path
 import sqlite3
 from core.log_anomalies import log_anomalies_to_db
 from core.detect_anomalies import detect_anomalies
+from core.config import DB_PATH
+
+
 
 # === Setup paths ===
 ROOT_DIR = Path(__file__).resolve().parents[1]  # Go up one level from /core
-DB_PATH = ROOT_DIR / "data" / "sensor_data.db"
 CHARTS_DIR = ROOT_DIR / "charts"
 CHARTS_DIR.mkdir(exist_ok=True)  # Create the charts folder if not there
 

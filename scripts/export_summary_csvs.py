@@ -11,22 +11,21 @@
 # ===========================================================
 
 import pandas as pd
-import sqlite3
-from pathlib import Path
-from datetime import timedelta
+from core.db import get_connection
+from core.config import DATA_DIR, LOCAL_TZ
 
-# Paths
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
-EXPORT_DIR = Path(__file__).resolve().parents[1] / "exports"
+
+EXPORT_DIR = DATA_DIR / "exports"
 EXPORT_DIR.mkdir(parents=True, exist_ok=True)
 
+
 def export_summary_csvs():
-    with sqlite3.connect(DB_PATH) as conn:
+    with get_connection() as conn:
         df = pd.read_sql_query("SELECT * FROM processed_logs", conn)
 
-    # Convert timestamp to datetime and shift to local time (UTC+2)
+    # Convert to tz-aware UTC, then to local timezone (DST-safe)
     df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
-    df["timestamp"] = df["timestamp"] + timedelta(hours=2)
+    df["timestamp"] = df["timestamp"].dt.tz_convert(LOCAL_TZ)
 
     # Create time-based columns
     df["hour"] = df["timestamp"].dt.hour
@@ -63,14 +62,30 @@ def export_summary_csvs():
             df.groupby("day")["temperature"].max().reset_index(),
     }
 
-    # Calculate compressor ON/OFF transitions
-    df = df.sort_values("timestamp")
-    df["prev_status"] = df["compressor_status"].shift(1)
-    df["status_change"] = df["compressor_status"] != df["prev_status"]
-    df_trans = df[df["status_change"] == True].copy()
-    df_trans["Status Change"] = df_trans["compressor_status"].map({1: "Turned ON", 0: "Turned OFF"})
-    df_trans["day"] = df_trans["timestamp"].dt.date
-    transition_counts = df_trans.groupby(["day", "Status Change"]).size().reset_index(name="count")
+    # --- Fixed: Calculate compressor ON/OFF transitions (no overcount) ---
+    # Sort, keep only unique (timestamp, status) pairs to avoid duplicates,
+    # then count only TRUE status changes between consecutive rows.
+    df_trans_base = (
+        df.sort_values("timestamp")
+          .loc[:, ["timestamp", "compressor_status"]]
+          .drop_duplicates()
+          .copy()
+    )
+    # Ensure int (sometimes read as float)
+    df_trans_base["compressor_status"] = df_trans_base["compressor_status"].astype(int)
+
+    df_trans_base["prev_status"] = df_trans_base["compressor_status"].shift(1)
+    transitions = df_trans_base[df_trans_base["compressor_status"] != df_trans_base["prev_status"]].copy()
+
+    transitions["Status Change"] = transitions["compressor_status"].map({1: "Turned ON", 0: "Turned OFF"})
+    transitions["day"] = transitions["timestamp"].dt.date
+
+    transition_counts = (
+        transitions.groupby(["day", "Status Change"])
+        .size()
+        .reset_index(name="count")
+    )
+    # ---------------------------------------------------------------
 
     # Save compressor transitions
     transition_counts.to_csv(EXPORT_DIR / "compressor_transitions_by_day.csv", index=False)
@@ -81,18 +96,19 @@ def export_summary_csvs():
 
     # Export anomalies table if it exists
     try:
-        with sqlite3.connect(DB_PATH) as conn:
+        with get_connection() as conn:
             anomalies_df = pd.read_sql_query(
                 "SELECT id, timestamp, sensor, value, z_score FROM anomalies ORDER BY id", conn
             )
         anomalies_df["timestamp"] = pd.to_datetime(anomalies_df["timestamp"], utc=True)
-        anomalies_df["timestamp"] = anomalies_df["timestamp"] + timedelta(hours=2)
+        anomalies_df["timestamp"] = anomalies_df["timestamp"].dt.tz_convert(LOCAL_TZ)
         anomalies_df.to_csv(EXPORT_DIR / "anomalies.csv", index=False)
         print("Exported anomalies.csv with local time.")
     except Exception as e:
         print("Skipped anomalies export —", e)
 
     print(f"Exported {len(summaries)} summary CSV files to: {EXPORT_DIR}")
+
 
 if __name__ == "__main__":
     export_summary_csvs()

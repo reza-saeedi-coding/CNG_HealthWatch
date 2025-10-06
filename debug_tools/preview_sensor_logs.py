@@ -9,10 +9,8 @@ Useful for verifying that raw sensor data is being collected and logged correctl
 
 import sqlite3
 import pandas as pd
-from pathlib import Path
+from core.config import DB_PATH
 
-# Define the path to the SQLite database
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
 
 # Connect to the DB and fetch the latest raw sensor logs
 conn = sqlite3.connect(DB_PATH)

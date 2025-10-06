@@ -9,10 +9,9 @@ Intended for debugging or manual inspection. Not used in production flow.
 
 import sqlite3
 import pandas as pd
-from pathlib import Path
+from core.config import DB_PATH
 
-# Define the path to the database
-DB_PATH = Path(__file__).resolve().parents[1] / "data" / "sensor_data.db"
+
 
 # Connect to the database and fetch the latest anomalies
 with sqlite3.connect(DB_PATH) as conn:
